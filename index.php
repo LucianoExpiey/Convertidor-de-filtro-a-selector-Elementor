@@ -79,20 +79,15 @@ function enqueue_custom_filter_script() {
     });
     ";
     
-    // Agrega los scripts al final de jQuery
     wp_add_inline_script('jquery', $script);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_filter_script');
 
 // Procesa la solicitud de búsqueda
 function search_filter_process() {
-    // Lógica para procesar la búsqueda y devolver los resultados filtrados
-    // ...
-
-    // Ejemplo de respuesta de prueba
     $response = array(
         'success' => true,
-        'message' => 'Resultados de la búsqueda aquí...'
+        'message' => 'Resultados de la búsqueda...'
     );
 
     // Devuelve la respuesta como JSON
